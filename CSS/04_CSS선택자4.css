@@ -1,0 +1,56 @@
+/* 일반 구조 선택자 */
+/* A:first-child */
+/* 형제들 중 첫 번째가 A가 맞다면 선택 */
+#test1 > p:first-child{background-color: red; color:white;}
+
+/* A:last-child */
+/* 형제들 중 마지막 A가 맞다면 선택 */
+#test1 > pre:last-child{background-color: blue; color:white;}
+
+/* A:nth-child */
+/* 형제들 중 n번째가 A가 맞다면 선택 */
+#test1 > p:nth-child(3){background-color: yellow; color:black;}
+
+/* 홀수번째가 p태그인 경우 선택 */
+#test1 > p:nth-child(2n-1){
+    text-decoration:line-through; /*가운데선 */
+}
+
+/* 짝수번째가 p태그인 경우 선택 */
+#test1 > p:nth-child(2n){
+    font-family:"궁서체"; 
+    font-weight:bold;
+}
+
+/* A:nth-last-child(숫자 또는 수열) */
+/* 형제들 중 뒤에서부터 n번째가 A가 맞다면 선택 */
+#test1 > p:nth-last-child(4){
+    border : 5px dotted black
+}
+
+/* 형태 구조 선택자 */
+
+/* A : first-of-type */
+/* 선택된 A요소들 중 첫 번째 */
+#test2 > p:first-of-type{background-color: violet;}
+
+/* A : last-of-type */
+/* 선택된 A요소들 중 마지막 */
+#test2 > p:last-of-type{background-color: brown;}
+
+/* A : nth-of-type */
+/* 선택된 A요소들 중 n 번째 */
+#test2 > p:nth-of-type(2){background-color: olive;}
+
+/* 선택된 A요소들 중 짝수 */
+#test2 > p:nth-of-type(2n){font-style:italic;}
+
+/* A : nth-last-of-type */
+/* 선택된 A 요소들 중 뒤에서 n번째 선택 */
+#test2 > p:nth-last-of-type(2):hover{color:red; font-family:bold;}
+
+
+/* 부정 선택자 */
+
+#test3 > li:not(:nth-of-type(3n)){background-color: pink;}
+
