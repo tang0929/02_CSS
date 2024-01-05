@@ -1,0 +1,122 @@
+.area1{
+    background-color: red;
+}
+.area2{
+    background-color: orange;
+}
+.area3{
+    background-color: yellow;
+}
+.area4{
+    background-color: green;
+}
+.area5{
+    background-color: blue;
+}
+
+.block{
+    border:1px solid black;
+    width:150px;
+    height:150px;
+    color:white;
+    display:block;
+}
+
+.inline{display:inline;}
+.inline-block{display:inline-block;}
+.none{display:none;}
+
+/* visibility 속성 : 요소를 보이게/투명하게 만드는 속성
+    투명하게 만들어도 요소 크기 만큼의 공간은 계속 차지하는 상태*/
+
+.hidden{ visibility:hidden; }
+
+
+/* 상하 2분할 */
+
+/* 감싸는 요소 */
+.container{
+    border:3px solid black;
+    width: 471px;
+    height: 471px;
+}
+
+/* 내부 영역 분할 요소(자식) */
+#test1 > div{
+    width:100%;
+    height:50%;
+}
+
+#test1 > div:first-child{
+    background-color: green;
+}
+#test1 > div:last-child{
+    background-color: red;
+}
+
+/* 3분할 */
+.container{
+    border:3px solid black;
+    width: 471px;
+    height: 471px;
+}
+
+#test2 > div:first-child{
+    background-color:yellow;
+    width:100%;
+    height:20%;
+}
+#test2 > div:nth-child(2){
+    background-color:green;
+    width:100%;
+    height:30%;
+}
+#test2 > div:last-child{
+    background-color:blue;
+    width:100%;
+    height:50%;
+}
+
+/* 3분할 방법2 */
+.bg-yel{background-color: yellow;}
+.bg-gre{background-color: green;}
+.bg-blu{background-color: blue;}
+
+.h-20{height:20%}
+.h-30{height:30%}
+.h-50{height:50%}
+
+/* 가로 2분할 */
+#test4 > div:first-child{
+    width:50%;
+    height:100%;
+    display:inline-block;
+    background-color:red;
+}
+#test4 > div:last-child{
+    width:50%;
+    height:100%;
+    display:inline-block;
+    background-color:lemonchiffon;
+}
+
+/* 田 모양 */
+#test5{
+    /* inline, inline-block, 글들 사이의 높이 간격 0 */
+    line-height: 0;
+  }
+  
+  #test5 > div{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+  }
+  
+  #test5 > div:nth-child(1){ background-color: pink;}
+  #test5 > div:nth-child(2){ background-color: yellow;}
+  #test5 > div:nth-child(3){ background-color: yellowgreen;}
+  #test5 > div:nth-child(4){ background-color: skyblue;}
+  
+
+
+

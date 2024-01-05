@@ -9,7 +9,15 @@ code{
   display : block; /* block 형식으로 변경 */
 }
 
-
+@font-face {
+  font-family: 'NPSfontBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  font-family:'NPSfontBold';
+}
 
 /* ----- 기본 속성 선택자 ----- */
 
@@ -82,8 +90,14 @@ p[data="data-2"] {background-color: blue;}
   cursor: pointer;
 }
 
+#activebox:hover {
+  background-size:250px;
+}
 /* #activeBox가 클릭되고 있을 때 */
 #activeBox:active {
+  background-color: blue;
+}
+#activeBox:hover {
   background-color: yellow;
 }
 
@@ -163,6 +177,7 @@ p[data="data-2"] {background-color: blue;}
 #check:checked + label/* 체크된 체크박스 뒤 라벨 */{
     background-image: url(../images/checkbox.png);
     background-size: cover;
+    background-repeat:repeat;
 } 
 
 /* 3. 진짜 체크박스가 존재는하지만 보이지 않게 숨기기 */
